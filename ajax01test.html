@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+
+    <script src="ajax01.js"></script>
+    <script>
+
+window.onload = function(){
+
+var btn = document.getElementById("btn")
+    btn.onclick = function(){
+        ajax('data.txt',function(str){
+            alert(str)
+        })
+    }
+}
+
+    </script>
+
+    <body>
+    <button id ="btn">提交</button>
+    </body>
+
+</html>
