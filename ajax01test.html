@@ -10,9 +10,11 @@
 window.onload = function(){
 
 var btn = document.getElementById("btn")
+var text = document.getElementById("text")
     btn.onclick = function(){
+        //本地文件没有跨域问题
         ajax('data.txt',function(str){
-            alert(str)
+            text.innerHTML=str;
         })
     }
 }
@@ -21,6 +23,7 @@ var btn = document.getElementById("btn")
 
     <body>
     <button id ="btn">提交</button>
+    <div id="text">21</div>
     </body>
 
 </html>
